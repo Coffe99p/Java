@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSC</title>
+</head>
+<body>
+    <!-- esta é a div principal -->
+    Qual seu burro favorito
+        <br><br><br>
+    
+    <div class="burro" id="burro">  
+            burro feliz
+        <br>
+        <img onclick="executar('a');"  src = 'burro.png'>
+    </div>
+    
+    <div class="burro2" id="burro2">
+       burro das pedras
+        <br>
+        <img onclick="executar('b');" src = 'burro2.png'>
+    </div>
+
+    <div class="burro3" id="burro3">
+        burro do molesto
+        <br>
+        <img onclick="executar('c');" src = 'burro3.png'>
+    </div>
+    
+    <button onclick="limpar();">odeio o burro</button>
+    
+    <br>Total de shreks assuatados: <span id="total_sk"> 0</span>
+    <div class="burro" id="burro"></div>
+
+    Total de shreks curiosos: <span id="total_sk2"> 0</span>
+    <div class="burro2" id="burro2"></div>
+
+    Total de shreks SUS: <span id="total_sk3"> 0</span>
+    <div class="burro3" id="burro3"></div>
+
+</body>
+<script>
+    a = 0
+    b = 0
+    c = 0
+    function limpar()
+    {
+        a = 0
+        b = 0
+        c = 0
+        burro.innerHTML = ""; //limpa td
+        burro2.innerHTML = ""; //limpa td
+        burro3.innerHTML = ""; //limpa td
+    }
+  
+    function executar(letra)
+    {
+        if (letra == 'a')
+        {
+            a = a + 1;
+            total_sk.innerHTML = a
+           burro.innerHTML += "<br> <img src= 'a.png'>";
+        }
+        if (letra == 'b')
+        {
+            b = b + 1;
+            total_sk2.innerHTML = b
+            burro2.innerHTML += "<br> <img src= 'b.png'>";
+        }
+        if (letra == 'c')
+        {
+            c = c + 1;
+            total_sk3.innerHTML = c
+            burro3.innerHTML += "<br> <img src= 'c.png'>";
+        }
+    }
+
+
+
+</script>
+</html>
